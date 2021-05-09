@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:regularc&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,regular,700 &display=swap");
+$font: "Josefin", sans-serif;
+$font1: "Aleo", serif;
+
+@mixin Aleo_reg {
+  font-family: $font1;
+  font-weight: 400;
+}
+@mixin josefin_reg {
+  font-family: $font;
+  font-weight: 400;
+}
+@mixin josefin_bolt {
+  font-family: $font;
+  font-weight: 700;
+}
+@mixin josefin_light {
+  font-family: $font;
+  font-weight: 300;
+}
+@mixin icon__travel {
+  display: flex;
+  flex-direction: column;
+  width: 424px;
+  height: 139px;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}

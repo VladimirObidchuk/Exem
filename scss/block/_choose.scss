@@ -1,0 +1,73 @@
+.header {
+  &__choose {
+    background: url("../img/WhyBackground.png") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.container {
+  &__choose {
+    height: 704px;
+    margin: 0;
+  }
+}
+.choose {
+  &__content {
+    margin: 10% 0 0;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    @include Aleo_reg;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-transform: capitalize;
+    color: $color;
+    letter-spacing: 0.1em;
+  }
+  &__text {
+    @include josefin_light;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin: 5% 1%;
+    color: $color;
+    letter-spacing: 0.1em;
+  }
+  .choose__button {
+    width: 38%;
+    height: 4rem;
+    text-transform: uppercase;
+    color: $color;
+    background-color: $button;
+    color: $color;
+    letter-spacing: 0.1em;
+  }
+  &__footer {
+    height: 306px;
+  }
+}
+.content__icon {
+  display: flex;
+  align-items: center;
+  margin: 10% 5% 0;
+}
+.icon {
+  &__img {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2%;
+  }
+}
+
+@media (max-width: $lg) {
+  .icon__img img {
+    width: 100%;
+  }
+  .choose__content {
+    text-align: center;
+  }
+}

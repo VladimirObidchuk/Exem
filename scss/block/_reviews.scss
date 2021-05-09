@@ -1,0 +1,75 @@
+.header {
+  &__reviews {
+    background: url("../img/BG.png") center no-repeat;
+    height: 700px;
+    margin: 0 auto;
+  }
+}
+.reviews {
+  &__title {
+    @include Aleo_reg;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    color: $color;
+    text-align: center;
+    padding: 7% 0;
+  }
+}
+.icon {
+  &__reviews {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__reviews img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.content {
+  &__reviews {
+    width: 100%;
+    height: 100%;
+    background-color: $bdreviews;
+    padding: 8% 6%;
+  }
+}
+.title {
+  &__reviews {
+    @include josefin_reg;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1em;
+    color: $color;
+    text-transform: uppercase;
+    margin: 0 0 2%;
+  }
+}
+.text {
+  &__reviews {
+    @include josefin_light;
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    color: $color;
+  }
+  &__reviews span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: $xl) {
+  .header__reviews {
+    height: 1300px;
+  }
+}
+@media (max-width: $lg) {
+  .header__reviews {
+    height: 1000px;
+  }
+}
+@media (max-width: $md) {
+  .header__reviews {
+    height: 900px;
+  }
+}

@@ -1,0 +1,82 @@
+.travel {
+  &__step {
+    width: 100%;
+    height: 306px;
+    background-color: $bdreviews;
+  }
+
+  &__way {
+    width: 100%;
+    text-align: center;
+    margin: 3% 0 -2%;
+  }
+
+  &__footer {
+    z-index: 2;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__search {
+    @include icon__travel;
+  }
+  &__select {
+    @include icon__travel;
+    margin: 2px 1%;
+  }
+
+  &__book {
+    @include icon__travel;
+  }
+}
+
+._icon-search {
+  font-size: 4.5rem;
+  color: $button;
+}
+
+._icon-check {
+  font-size: 5rem;
+  color: $red;
+}
+
+._icon-thumbs {
+  font-size: 4.5rem;
+  color: $blue;
+}
+@media (max-width: $xxl) {
+  .travel__way {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: $xl) {
+  .travel__way {
+    transform: scale(0.7);
+    margin: 3% 0 -3%;
+  }
+}
+@media (max-width: $lg) {
+  .line__footer img {
+    display: none;
+  }
+  .travel__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0 0;
+  }
+  .travel__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .travel__step {
+    height: 430px;
+  }
+}
