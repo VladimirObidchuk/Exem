@@ -1,0 +1,77 @@
+::after,
+::before,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+@import "./libs/font";
+@import "./libs/color";
+@import "../scss/libs/breakpoint";
+@import "../scss/block/navigation";
+@import "../scss/block/choose";
+@import "../scss/block/travel__choose";
+@import "../scss/block/travel";
+@import "../scss/block/travel1";
+@import "../scss/block/reviews";
+@import "../scss/block/contact";
+
+.block {
+  &__title {
+    @include josefin_light;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1em;
+    color: $color;
+  }
+  &__subtitle {
+    @include josefin_reg;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: $color;
+  }
+  &__text {
+    @include josefin_light;
+    font-size: 1rem;
+    line-height: 1.95rem;
+    letter-spacing: 0.1em;
+    color: $color;
+  }
+}
+.choose {
+  &__book {
+    top: 5%;
+    width: 213px;
+    height: 60px;
+    background-color: $button;
+    @include Aleo_reg;
+    font-size: 1.05rem;
+    line-height: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $color;
+    // text-transform: capitalize;
+    margin: 5% 0 0;
+    border: 1px solid $button;
+  }
+  &__book:hover {
+    transform: scale(1.1);
+  }
+}
+.travel__link {
+  text-decoration: none;
+  color: $color;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+input:not(.class) {
+  background: no-clip;
+}

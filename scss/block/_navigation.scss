@@ -1,0 +1,259 @@
+.header {
+  background: url("../img/HeaderBackground.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  &__body {
+    display: flex;
+    height: 862px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    text-align: center;
+    width: calc(100% - 40%);
+  }
+  .travel__name {
+    @include josefin_reg;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    color: $placeholder;
+    padding: 0 3% 0;
+    border: none;
+    outline: none;
+  }
+  .travel__name::placeholder {
+    @include josefin_reg;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: $placeholder;
+  }
+  &__title {
+    @include josefin_bolt;
+    font-size: 3rem;
+    line-height: 2.3rem;
+    text-align: center;
+    color: $color;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &__subtitle {
+    @include josefin_reg;
+    font-size: 1.3rem;
+    line-height: 3.3rem;
+    color: $color;
+  }
+  &__trititle {
+    @include josefin_reg;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    color: $color;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: $color;
+    margin: 0 0 10%;
+  }
+  .text input {
+    width: 78%;
+    height: 98%;
+    border: none;
+  }
+  button {
+    width: 21%;
+    height: 85%;
+    background-color: $button;
+    color: $color;
+    @include Aleo_reg;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+  .header__chevron {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $color;
+    margin: 0px 0 2%;
+  }
+}
+.chevron {
+  width: 14px;
+  height: 16px;
+  margin: 0;
+}
+.footer__menu {
+  width: 100%;
+  left: 0px;
+  background: $footer;
+  position: sticky;
+}
+.name__logo {
+  margin: 1% 0 0;
+  text-align: center;
+  width: 100%;
+  color: $color;
+}
+.name__logo {
+  @include josefin_bolt;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.menu {
+  width: 99%;
+  margin: 3% 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    @include Aleo_reg;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.1em;
+    margin: 0 1% 0;
+  }
+
+  &__link {
+    color: $color;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.burger {
+  display: none;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 85%;
+  bottom: 20px;
+  z-index: 3;
+  &__item,
+  &__item::before,
+  &__item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  &__item::before {
+    bottom: 18px;
+  }
+  &__item::after {
+    top: 18px;
+  }
+}
+.mobil {
+  background: rgba($color: $menubg, $alpha: 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  display: block;
+  transition: all 0.3s;
+  pointer-events: none;
+  transform: translateY(-100%);
+  margin: 0 auto;
+  .menu-open & {
+    transform: translateX(0%);
+    pointer-events: initial;
+  }
+  &__title {
+    margin: 3% 0 8%;
+  }
+  &__text {
+    @include josefin_bolt;
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color;
+  }
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin: 5% 0;
+  }
+
+  &__link {
+    @include Aleo_reg;
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color;
+  }
+  .burger {
+    &__mobil {
+      display: block;
+      width: 50px;
+      height: 30px;
+      cursor: pointer;
+      position: relative;
+      left: 85%;
+      top: 45px;
+      z-index: 2;
+    }
+    &__text i {
+      font-size: 4rem;
+      color: $color;
+    }
+  }
+}
+@media (max-width: $xl) {
+  .menu__item {
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 0.01em;
+  }
+}
+@media (max-width: $lg) {
+  .menu__item {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+}
+@media (max-width: $md) {
+  .menu {
+    display: none;
+  }
+  .header__content {
+    width: 90%;
+  }
+  .header button {
+    height: 80%;
+  }
+  .name__logo {
+    margin: 5% 0 0;
+  }
+  .burger {
+    display: block;
+  }
+  // .footer__menu {
+  //   position: fixed;
+  //   align-items: flex-end;
+  //   width: 99%;
+  //   background: rgba($color: $footer, $alpha: 0.5);
+  //   z-index: 1;
+  // }
+}
